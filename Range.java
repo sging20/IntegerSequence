@@ -31,7 +31,7 @@
           return current;
         }
       else{
-        throw new NoSuchElementException();
+        throw new NoSuchElementException("No element next.");
       }
     }       //return the current value in the sequence and advances to the next element.
 }
