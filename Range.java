@@ -12,4 +12,12 @@
     public int length(){
         return (Math.abs(start- end));
       }
+    public boolean hasNext(){
+        if(current < end){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
 }
