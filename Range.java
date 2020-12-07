@@ -9,5 +9,7 @@
   public void reset(){
       current = start;
     }
-
+    public int length(){
+        return (Math.abs(start- end));
+      }
 }
