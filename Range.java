@@ -3,7 +3,7 @@
   private int start,end,current;
 
   public Range(int startinput,  int endinput){
-      start= startinput-1;
+      start= startinput;
       end= endinput;
       current = start;
     }
@@ -13,7 +13,7 @@
     }
 
     public int length(){
-        return (Math.abs(start- end));
+        return (Math.abs(start- end) +1);
       }
 
     public boolean hasNext(){
@@ -24,7 +24,7 @@
           return false;
         }
       }
-      
+
     public int next(){
       if(hasNext()){
             current++;
