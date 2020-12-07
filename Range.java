@@ -6,5 +6,8 @@
       end= endinput;
       current = start;
     }
+  public void reset(){
+      current = start;
+    }
 
 }
