@@ -26,7 +26,9 @@ boolean hasNext(){
   int length(){
     return (data.length);
   }     //returns the total length of the sequence
-  void reset();     //start over from the start of the sequence
+  void reset(){
+    currentIndex= 0;
+  }     //start over from the start of the sequence
 
 
 }
