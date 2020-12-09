@@ -34,11 +34,14 @@ public class ArraySequence implements IntegerSequence{
     this.currentIndex= 0;
   }     //start over from the start of the sequence
   public ArraySequence(IntegerSequence otherseq){
+    this.currentIndex = 0;
     otherseq.reset();
     this.data = new int[otherseq.length()];
     for(int i=0; i<= otherseq.length(); i++){
+      if(hasNext() == true){
       this.data[i]= otherseq.next();
     }
+  }
     otherseq.reset();
     }
 
