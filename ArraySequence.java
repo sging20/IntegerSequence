@@ -16,12 +16,17 @@ public class ArraySequence implements IntegerSequence{
 }
 //does the sequence have more elements?
   public int next(){
-    if(hasNext()){
-      this.currentIndex+= 1;
-      return this.data[this.currentIndex- 1];
-    }
+    int ret= 0;
+    if(hasNext() == false){
       throw new NoSuchElementException("No element next.");
-  }     //return the current value in the sequence and advances to the next element.
+  }
+  if(hasNext()== true){
+    this.currentIndex+= 1;
+    ret= this.data[this.currentIndex- 1];
+  }
+  return ret;
+}
+       //return the current value in the sequence and advances to the next element.
   public int length(){
     return (this.data.length);
   }     //returns the total length of the sequence
