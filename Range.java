@@ -13,22 +13,20 @@
     }
 
     public int length(){
-        return (Math.abs(start- end) +1);
+        return Math.abs(start- end) +1;
       }
 
     public boolean hasNext(){
-        if(current < end){
+        if(current <= end){
           return true;
         }
-        else{
           return false;
-        }
       }
 
     public int next(){
       if(hasNext()){
             current++;
-          return current;
+          return current-1;
         }
       else{
         throw new NoSuchElementException("No element next.");
